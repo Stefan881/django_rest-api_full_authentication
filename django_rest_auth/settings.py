@@ -27,7 +27,12 @@ environ.Env.read_env(BASE_DIR / '.env')
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+
+
+# SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY = "django-insecure--yo4m(h*23oape!u)z9l4(&jn)w852c3(h$7y(da*@(@$rohg2"
+
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG =env('DEBUG')
@@ -93,6 +98,8 @@ DATABASES = {
     }
 }
 
+
+AUTH_USER_MODEL = "accounts.User"
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
